@@ -1,0 +1,87 @@
+{
+ "autoname": "field:po_number",
+ "creation": "2020-10-01 11:49:56.445272",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "po_number",
+  "partner_company",
+  "column_break_3",
+  "work_description",
+  "is_active",
+  "section_break_5",
+  "po_structure"
+ ],
+ "fields": [
+  {
+   "fieldname": "po_number",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "PO Number",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "po_structure",
+   "fieldtype": "Table",
+   "label": "PO Structure",
+   "options": "PO Structure"
+  },
+  {
+   "fieldname": "work_description",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Work Description"
+  },
+  {
+   "fieldname": "partner_company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Partner Company",
+   "options": "Partner Company"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Active"
+  }
+ ],
+ "modified": "2020-10-17 11:03:54.325160",
+ "modified_by": "Administrator",
+ "module": "HSM working",
+ "name": "Purchase Order",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "po_number",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "po_number",
+ "track_changes": 1
+}

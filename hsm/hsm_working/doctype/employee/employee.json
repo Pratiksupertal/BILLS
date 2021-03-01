@@ -1,0 +1,117 @@
+{
+ "autoname": "field:employee_name",
+ "creation": "2020-01-16 12:47:06.492977",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_code",
+  "employee_name",
+  "doj",
+  "dob",
+  "company_assigned",
+  "column_break_5",
+  "addhar_card",
+  "pan_card",
+  "bank_name",
+  "account_no",
+  "ifsc_code"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_code",
+   "fieldtype": "Data",
+   "label": "Employee Code"
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "doj",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "DOJ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "company_assigned",
+   "fieldtype": "Link",
+   "label": "Company Assigned",
+   "options": "Partner Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "addhar_card",
+   "fieldtype": "Data",
+   "label": "Addhar Card"
+  },
+  {
+   "fieldname": "pan_card",
+   "fieldtype": "Data",
+   "label": "PAN Card"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": "Bank Name"
+  },
+  {
+   "fieldname": "account_no",
+   "fieldtype": "Data",
+   "label": "Account No."
+  },
+  {
+   "fieldname": "ifsc_code",
+   "fieldtype": "Data",
+   "label": "IFSC Code"
+  }
+ ],
+ "modified": "2020-10-13 20:32:47.694332",
+ "modified_by": "Administrator",
+ "module": "HSM working",
+ "name": "Employee",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

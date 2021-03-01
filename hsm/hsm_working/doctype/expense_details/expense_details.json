@@ -1,0 +1,59 @@
+{
+ "creation": "2020-10-04 14:21:00.371574",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "date",
+  "expense_type",
+  "expense_nill",
+  "remark"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "expense_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Expense Type",
+   "options": "\nShoes\nCloths\nAdvance"
+  },
+  {
+   "default": "0",
+   "fieldname": "expense_nill",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Expense Nill"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Remark"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-10-04 14:25:25.806223",
+ "modified_by": "Administrator",
+ "module": "HSM working",
+ "name": "Expense Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,251 @@
+
+<!-- po new 11-9-20 -->
+
+<html>
+<head>
+	<style type="text/css">
+	.mane-hs {
+		font-weight: 600;
+		font-size: 20px;
+		display: block;
+		text-align: center;
+	}
+		.div_left{margin-left: 20px;}
+		.tac{text-align: center;}
+		.tar{text-align: right;}
+		.tal{text-align: left;}
+
+		.brh{border-right: hidden;}
+		.bbh{border-bottom: hidden;}
+		.bth{border-top: hidden;}
+		.blh{border-left: hidden;}
+
+		.print-format td, .print-format th {
+			    vertical-align: top !important;
+			    padding: 2px !important;
+			    border-color:black !important;
+		}
+		*.f_font{font-family: Calibri, Candara, Segoe, Optima, Arial, sans-serif;font-size:10px;"}
+		table { border-color:black !important; }
+		.heading {
+    font-size: 15px !important;
+    vertical-align: middle !important;
+    font-weight: 900;
+}
+.divider {
+    width: 100%;
+    border: 1px solid #333;
+    margin-top:-5px;
+		margin-bottom: -5px;
+}.service-provider {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+.address {
+    display: block;
+    text-align: left;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.mobile {
+    display: block;
+    text-align: left;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.pan {
+    display: block;
+    text-align: left;
+    font-size: 15px;
+}.no-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}.small {font-size: 10px !important;}
+.extra-small {
+    font-size: 11px !important;
+    line-height: 20px;
+}.no-border td {
+    border: 0;
+    padding: 3px 6px;
+    vertical-align: middle !important;
+}.bold-text {font-weight: 600;}
+.vmiddle { vertical-align: middle !important;}
+.main_table{ font-size: 14px;}
+.bill_detail{font-size: 12px;}
+	</style>
+</head>
+<body>
+<div class="container-fluid" style="font-size:11px;border: 2px solid #333;border-radius: 2px;">
+        <div class="outer">
+            <table class="table" style="border-top:hidden;">
+                <tr>
+                    <td rowspan="3"  width="20%"></td>
+                    <td rowspan="3" width="50%" class="text-center heading"> <b style="margin-right: -30px;">   TAX INVOICE</b> </td>
+                    <td class="text-center small" width="30%" style="text-align:left;">ORIGINAL FOR SUPPLIER</td>
+                </tr>
+                <tr>
+                    <td class="text-center small" style="text-align:left;">DUPLICATE FOR SUPPLIER</td>
+                </tr>
+                <tr>
+                    <td class="text-center small" style="text-align:left;">ACKNOWLEDMENT COPY</td>
+                </tr>
+            </table>
+
+            <div class="divider"></div>
+            <table class="table no-border"  style="margin-top:-15px">
+                <tr>
+                    <td class="text-center">
+                        <p><span class="mane-hs">MANE H.S.</span></p>
+                        <p><span class="service-provider">(SERVICE PROVIDER)</span></p>
+                        <span class="address">A-6 , Datta Vihar , Pune Benglore Highway, Shirwal , Tal .- Khandala, Dist Satara.</span>
+												<p><span class="pan">GSTN -: 27AGIPM5761A1ZH .</span> <span class="pan">PAN NO -: AGIPM5761A</span></p>
+	                      <p></p>
+	                      <p><span class="mobile">Mob. -: 8796543780 , 9595933214</span></p>
+                    </td>
+                </tr>
+            </table>
+
+            </table>
+            	<!-- <hr style="border-width:2px;border-color:solid #000;"> -->
+            <div class="divider-secondary"></div>
+            <table class="table">
+                <tr>
+                    <td width="60%" class="vtop">
+
+                        <p><span class="bill_detail">To,</span></p>
+                        <p><span class="bill_detail">{{doc.partner_company}}</span></p>
+                        <p><span class="bill_detail">{{frappe.db.get_value("Partner Company",{'name':doc.partner_company},"address")}}</span></p>
+                        <p><span class="bill_detail">GSTN NO. :- {{frappe.db.get_value("Partner Company",{'name':doc.partner_company},"gstn")}}</span></p>
+                        <p><span class="bill_detail">State Code :- 27</span></p>
+                    </td>
+                    <td class="no-padding" width="40%">
+                        <table class="table no-border" style="border-top:hidden;margin-top:-2px;">
+                            <tr>
+                                <td class="bill_detail" width="51%">Bill No :-</td>
+                                <td class="bill_detail" width="49%">{{doc.bill_no}}</td>
+                            </tr>
+                            <tr>
+															  <td class="bill_detail">Date :-</td>
+                                <td class="bill_detail">{{ frappe.utils.formatdate(doc.date,"dd/MM/yyyy")}}</td>
+                            </tr>
+                            <tr>
+                                <td class="bill_detail">PO No. :-</td>
+                                <td class="bill_detail">
+																	{% if doc.po_number %}
+				 															{{ doc.po_number or '' }}
+																	{% endif %}
+																</td>
+                            </tr>
+                            <tr>
+                                <td class="bill_detail">Vendor Code :- </td>
+                                <td class="bill_detail">
+																	{% set vendor_code = frappe.db.get_value("Partner Company",{'name':doc.partner_company},"vendor_code") %}
+																	{% if vendor_code %}
+																		{{ vendor_code or ""}}
+																	{% endif %}
+
+                            </tr>
+                            <tr>
+                                <td class="bill_detail">HSN/SAC Code:- </td>
+                                <td class="bill_detail">
+																	{% set hsn = frappe.db.get_value("Partner Company",{'name':doc.partner_company},"hsnsac_code") %}
+																	{% if hsn %}
+																		{{ hsn or ""}}
+																	{% endif %}
+																	</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <table class="table table-bordered margin-ten main_table" style="margin-top:-15px;">
+                <tr style="height:25px;">
+                    <td colspan="5" class="bold-text text-center" >{{ doc.header}} {{doc.billing_month}}</td>
+                </tr>
+                <tr class="vmiddle" style="height: 30px;padding:20px;">
+                    <td class="bold-text text-center" width="10%" style="margin-top:20px;">Sr. No.</td>
+                    <td class="bold-text text-center" width="30%" style="margin-top:20px;">Particulars</td>
+                    <td class="bold-text text-center" width="20%" style="margin-top:20px;">
+											{% if doc.piece_rate == 1%}
+											Qty
+											{% else%}
+											Mandays (nos)
+											{%endif%}
+										</td>
+                    <td class="bold-text text-center" width="20%" style="margin-top:20px;">Rate</td>
+                    <td class="bold-text text-center" width="20%" style="margin-top:20px;">Amount</td>
+                </tr>
+								{% set cnt=namespace(count=1) %}
+								{% for i in doc.billing_details%}
+								<tr>
+                    <td class="text-center">{{ cnt.count }}</td>
+										{% set cnt.count=cnt.count+1 %}
+                    <td>{{i.particulars}}</td>
+                    <td class="text-right">{{i.qty}}</td>
+                    <td class="text-right">{{i.rate}}</td>
+                    <td class="text-right">{{ '%0.1f' % i.amount|float}}</td>
+                </tr>
+								{% endfor%}
+
+                <tr>
+                    <td class="bold-text text-right" colspan="3">Total - A</td>
+                    <!-- <td class="text-right"></td> -->
+                    <td class="text-right" colspan="1"></td>
+                    <td class="text-right">{{'%0.0f' %  doc.billing_amount|float }}</td>
+                </tr>
+                <tr>
+                    <td class="bold-text text-right" colspan="3">CGST</td>
+                    <!-- <td class="text-right">0</td> -->
+                    <td class="text-right" colspan="1"> 9%</td>
+                    <td class="text-right">{{doc.cgst}}</td>
+                </tr>
+                <tr>
+                    <td class="bold-text text-right" colspan="3">SGST</td>
+                    <!-- <td class="text-right">0</td> -->
+                    <td class="text-right" colspan="1"> 9%</td>
+                    <td class="text-right">{{doc.sgst}}</td>
+                </tr>
+                <tr>
+                    <td class="bold-text text-right" colspan="3"> Grand Total</td>
+                    <!-- <td class="text-right"></td> -->
+                    <td class="text-right" colspan="1"></td>
+                    <td class="text-right">{{doc.total_amount}}</td>
+                </tr>
+            </table>
+            <table class="table margin-ten no-border main_table" style="border-top:hidden;">
+                <tr>
+                    <td class="bold-text">Total Invoice Value :-</td>
+                    <td>{{doc.amount_in_words}}</td>
+                </tr>
+            </table>
+            <table class="table table-bordered">
+                <tr>
+                    <td width="70%" class="extra-small vmiddle">
+                            I/ we certify that our registration certificate under the GST act , 2017 is in force on the date on which the supply of goods specified in this Tax invoice is made by me/us and the transaction of supply covered by this Tax invoice had been effected by me/us and shall be accounted for in the turnover of supplies while filling of return and the due tax if any payble on supplies has been paid or shall be paid. Further certified that the particulars given above are true and correct and the amount indicated represents the prices actually charged and that there is no flow if additional consideration directly or indirectly from the buyer.
+                    </td>
+                    <td width="30%">
+                        <div class="signature" style="text-align:center;">
+                          <p><span class="signature-name" style="margin-top:200px;">For MANE H.S.</span></p>
+													<br> <br> <br> <br>
+                          <p><span class="signature-text" style="margin-top:200px;">Authorised Signatory</span></p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
+  </body>
+</html>
+
+</div>
+
+</body>
+</html>

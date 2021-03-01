@@ -1,0 +1,61 @@
+{
+ "owner": "Administrator",
+ "field_order": [
+  "date",
+  "employee_table"
+ ],
+ "quick_entry": 1,
+ "editable_grid": 1,
+ "creation": "2020-10-01 11:15:14.638852",
+ "track_changes": 1,
+ "name": "Ajay Daily Work",
+ "fields": [
+  {
+   "label": "Date",
+   "fieldtype": "Date",
+   "reqd": 1,
+   "fieldname": "date",
+   "in_list_view": 1
+  },
+  {
+   "label": "Employee Table",
+   "fieldtype": "Table",
+   "fieldname": "employee_table",
+   "options": "Summary"
+  }
+ ],
+ "permissions": [
+  {
+   "read": 1,
+   "email": 1,
+   "export": 1,
+   "delete": 1,
+   "share": 1,
+   "write": 1,
+   "print": 1,
+   "create": 1,
+   "role": "System Manager",
+   "report": 1
+  },
+  {
+   "read": 1,
+   "email": 1,
+   "export": 1,
+   "delete": 1,
+   "share": 1,
+   "write": 1,
+   "print": 1,
+   "create": 1,
+   "role": "Administrator",
+   "report": 1
+  }
+ ],
+ "sort_order": "DESC",
+ "modified_by": "Administrator",
+ "autoname": "format:{date}.{#}",
+ "doctype": "DocType",
+ "modified": "2020-10-01 11:31:26.918462",
+ "sort_field": "modified",
+ "engine": "InnoDB",
+ "module": "HSM working"
+}

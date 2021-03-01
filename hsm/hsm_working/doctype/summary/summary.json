@@ -1,0 +1,38 @@
+{
+ "creation": "2020-10-01 11:16:58.834134",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "piece"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "piece",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Piece",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-10-01 11:16:58.834134",
+ "modified_by": "Administrator",
+ "module": "HSM working",
+ "name": "Summary",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

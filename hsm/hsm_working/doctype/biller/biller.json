@@ -1,0 +1,174 @@
+{
+ "autoname": "format:{YY}-{bill_no}",
+ "creation": "2020-10-01 13:15:30.494110",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "po_number",
+  "date",
+  "billing_month",
+  "header",
+  "column_break_3",
+  "piece_rate",
+  "partner_company",
+  "bill_no",
+  "bill_header",
+  "section_break_6",
+  "reset_calculation",
+  "billing_details",
+  "section_break_8",
+  "billing_amount",
+  "total_amount",
+  "column_break_11",
+  "cgst",
+  "sgst",
+  "section_break_13",
+  "amount_in_words",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "po_number",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "PO Number",
+   "options": "Purchase Order"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bill_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Bill No.",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "bill_header",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Bill Header",
+   "options": "\nSMF -Labour Charges Bill on Mandays for the month of\nSMF -Laddle Lining Bill on Piece rate for the month of\nSMF - Furnace Lining Bill for the month of\nSMF-Melting Bill on piece rate for the month of\nDifference Bill SMF-Melting Bill on piece rate for the month of\nDifference Bill SMF-Melting Bill on mandays for the month of\nFurnace coil coating Bill for the month of\nSMF -Labour Charges Bill on mandays for the month of\nCIF -Melting Bill on Piece rate for the month of\nCIF -Labour Charges Bill on mandays for the month of\nCIF - Furnace Lining Bill for the month of\nPiece Rate Bill For the Month Of\nSMF - Appreciation Bill for the month of\nSecurity Mandays Bill for the month of",
+   "reqd": 1
+  },
+  {
+   "fieldname": "billing_details",
+   "fieldtype": "Table",
+   "label": "Billing Details",
+   "options": "Billing Details"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "billing_amount",
+   "fieldtype": "Int",
+   "label": "Billing Amount"
+  },
+  {
+   "fieldname": "cgst",
+   "fieldtype": "Int",
+   "label": "CGST"
+  },
+  {
+   "fieldname": "sgst",
+   "fieldtype": "Int",
+   "label": "SGST"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Int",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amount_in_words",
+   "fieldtype": "Data",
+   "label": "Amount in Words"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reset_calculation",
+   "fieldtype": "Button",
+   "label": "Reset Calculation"
+  },
+  {
+   "fieldname": "billing_month",
+   "fieldtype": "Data",
+   "label": "Billing Month"
+  },
+  {
+   "fieldname": "partner_company",
+   "fieldtype": "Link",
+   "label": "Partner Company",
+   "options": "Partner Company"
+  },
+  {
+   "default": "0",
+   "fieldname": "piece_rate",
+   "fieldtype": "Check",
+   "label": "Piece Rate"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Biller",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "header",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "label": "Header",
+   "options": "Bill Header"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-02-25 16:23:42.506645",
+ "modified_by": "Administrator",
+ "module": "HSM working",
+ "name": "Biller",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

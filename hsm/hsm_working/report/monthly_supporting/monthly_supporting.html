@@ -1,0 +1,67 @@
+<html>
+<head>
+  <script type="text/javascript">
+  function myFunction(data) {
+    console.log("-----------------------------");
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
+    ];
+    document.write("The current month is " + monthNames[data.getMonth()]);
+  }
+  const data = {{data[0]["working_date"] }}
+  // myFuction(data)
+
+</script>
+	<style type="text/css">
+    .header{
+      float:left;
+
+      font-size: 20px;
+      margin-left: -14px;
+      /* padding-bottom: 10px; */
+    }
+    b.ex1{
+      margin-left: 100px;
+    }
+    .ex2{
+      margin-left: 100px;
+      margin-top: 10px;
+    }
+	</style>
+</head>
+<body>
+	<div class="container-fluid report">
+		<div class="row">
+			<div class="col-sm-12 border ">
+				<h2>
+        	 <div class="header" >
+             <b class="ex1">H.S.M</b>-----------{{(filters) }}
+           </div>
+        </h2>
+	 		</div>
+		</div>
+	</div>
+	<table  border="1"   width ="30%" style="border:1px solid black;" class="ex2">
+		<thead>
+        <tr>
+           <th style="font-size: 15px; padding: 3px !important;">Order Date</th>
+           <th style="font-size: 15px; padding: 3px !important;">Order No</th>
+        </tr>
+  	</thead>
+   <tbody>
+      {% for(var i=0, l=data.length; i < l; i++) { %}
+    	<tr>
+        <td style="font-size: 13px; padding: 3px !important;">
+            {{data[i]["working_date"] }}
+	       </td>
+	            <td style="font-size: 13px; padding: 3px !important;">
+                {{data[i]["qty"]}}
+	            </td>
+          	</tr>
+          {% } %}
+
+       </tbody>
+   </table>
+
+</body>
+</html>
