@@ -97,10 +97,10 @@
             <table class="table no-border"  style="margin-top:-15px">
                 <tr>
                     <td class="text-center">
-                        <p><span class="mane-hs">MANE H.S.</span></p>
+                        <p><span class="mane-hs">HARSH ENTERPRISES</span></p>
                         <p><span class="service-provider">(SERVICE PROVIDER)</span></p>
                         <span class="address">A-6 , Datta Vihar , Pune Benglore Highway, Shirwal , Tal .- Khandala, Dist Satara.</span>
-												<p><span class="pan">GSTN -: 27AGIPM5761A1ZH .</span> <span class="pan">PAN NO -: AGIPM5761A</span></p>
+												<p><span class="pan">GSTN -: 27BSKPG0683E1ZS .</span> <span class="pan">PAN NO -: BSKPG0683E</span></p>
 	                      <p></p>
 	                      <p><span class="mobile">Mob. -: 8796543780 , 9595933214</span></p>
                     </td>
@@ -113,12 +113,17 @@
             <table class="table">
                 <tr>
                     <td width="60%" class="vtop">
+                      <p><span class="bill_detail">To,</span></p>
+                      <p><span class="bill_detail">Ajay Industrial Corportion Ltd</span></p>
+                      <p><span class="bill_detail">Gate No.381/382, Bhor Shirwal Road,</span></p>
+                      <p><span class="bill_detail">GSTN NO. :- 27AAHCA1943Q1Z8</span></p>
+                      <p><span class="bill_detail">State Code :- 27</span></p>
 
-                        <p><span class="bill_detail">To,</span></p>
+                        <!-- <p><span class="bill_detail">To,</span></p>
                         <p><span class="bill_detail">{{doc.partner_company}}</span></p>
                         <p><span class="bill_detail">{{frappe.db.get_value("Partner Company",{'name':doc.partner_company},"address")}}</span></p>
                         <p><span class="bill_detail">GSTN NO. :- {{frappe.db.get_value("Partner Company",{'name':doc.partner_company},"gstn")}}</span></p>
-                        <p><span class="bill_detail">State Code :- 27</span></p>
+                        <p><span class="bill_detail">State Code :- 27</span></p> -->
                     </td>
                     <td class="no-padding" width="40%">
                         <table class="table no-border" style="border-top:hidden;margin-top:-2px;">
@@ -162,7 +167,7 @@
             </table>
             <table class="table table-bordered margin-ten main_table" style="margin-top:-15px;">
                 <tr style="height:25px;">
-                    <td colspan="5" class="bold-text text-center" >{{ doc.bill_header or ''}} {{doc.billing_month or ''}}</td>
+                    <td colspan="5" class="bold-text text-center" >{{ doc.bill_header}} {{doc.billing_month}}</td>
                 </tr>
                 <tr class="vmiddle" style="height: 30px;padding:20px;">
                     <td class="bold-text text-center" width="10%" style="margin-top:20px;">Sr. No.</td>
@@ -188,16 +193,7 @@
                     <td class="text-right">{{ '%0.1f' % i.amount|float}}</td>
                 </tr>
 								{% endfor%}
-								<!-- Extra Row for blank bill -->
-								<!--
-								<tr>
-                    <td class="text-center">{{ cnt.count }}</td>
 
-                    <td></td>
-                    <td class="text-right"></td>
-                    <td class="text-right"></td>
-                    <td class="text-right"></td>
-                </tr> -->
                 <tr>
                     <td class="bold-text text-right" colspan="3">Total - A</td>
                     <!-- <td class="text-right"></td> -->
@@ -236,7 +232,7 @@
                     </td>
                     <td width="30%">
                         <div class="signature" style="text-align:center;">
-                          <p><span class="signature-name" style="margin-top:200px;">For MANE H.S.</span></p>
+                          <p><span class="signature-name" style="margin-top:200px;">For HARSH ENTERPRISES</span></p>
 													<br> <br> <br> <br>
                           <p><span class="signature-text" style="margin-top:200px;">Authorised Signatory</span></p>
                         </div>

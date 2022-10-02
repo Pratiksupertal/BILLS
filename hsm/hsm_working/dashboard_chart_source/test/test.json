@@ -1,0 +1,13 @@
+{
+ "creation": "2021-04-04 08:32:10.152691",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart Source",
+ "idx": 0,
+ "modified": "2021-04-04 08:32:10.152691",
+ "modified_by": "Administrator",
+ "module": "HSM working",
+ "name": "TEST",
+ "owner": "Administrator",
+ "source_name": "TEST",
+ "timeseries": 0
+}

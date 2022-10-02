@@ -15,6 +15,7 @@
  ],
  "fields": [
   {
+   "columns": 1,
    "fieldname": "po_number",
    "fieldtype": "Data",
    "in_global_search": 1,
@@ -30,14 +31,18 @@
    "options": "PO Structure"
   },
   {
+   "columns": 2,
    "fieldname": "work_description",
    "fieldtype": "Data",
    "in_filter": 1,
    "in_global_search": 1,
    "in_list_view": 1,
-   "label": "Work Description"
+   "in_preview": 1,
+   "label": "Work Description",
+   "width": "2"
   },
   {
+   "columns": 2,
    "fieldname": "partner_company",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -60,7 +65,7 @@
    "label": "Is Active"
   }
  ],
- "modified": "2020-10-17 11:03:54.325160",
+ "modified": "2021-08-02 13:21:02.523154",
  "modified_by": "Administrator",
  "module": "HSM working",
  "name": "Purchase Order",

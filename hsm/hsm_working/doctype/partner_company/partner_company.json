@@ -12,7 +12,8 @@
   "pan_number",
   "gstn",
   "vendor_code",
-  "hsnsac_code"
+  "hsnsac_code",
+  "status"
  ],
  "fields": [
   {
@@ -58,9 +59,15 @@
    "fieldname": "hsnsac_code",
    "fieldtype": "Data",
    "label": "HSN/SAC Code"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nActive\nInactive"
   }
  ],
- "modified": "2020-10-05 18:23:05.903669",
+ "modified": "2021-07-02 16:23:44.382859",
  "modified_by": "Administrator",
  "module": "HSM working",
  "name": "Partner Company",

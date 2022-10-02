@@ -1,0 +1,13 @@
+{
+ "creation": "2022-10-01 19:42:50.055482",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart Source",
+ "idx": 0,
+ "modified": "2022-10-01 19:42:50.055482",
+ "modified_by": "Administrator",
+ "module": "HSM working",
+ "name": "GST",
+ "owner": "Administrator",
+ "source_name": "GST",
+ "timeseries": 1
+}
