@@ -55,7 +55,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Bill Header",
-   "options": "\nSMF -Labour Charges Bill on Mandays for the month of\nSMF -Laddle Lining Bill on Piece rate for the month of\nSMF - Furnace Lining Bill for the month of\nSMF-Melting Bill on piece rate for the month of\nSMF-Attrition Metal Bill on piece rate for the month of\nDifference Bill SMF-Melting Bill on piece rate for the month of\nDifference Bill SMF-Melting Bill on mandays for the month of\nDifference Bill CIF - Labour Charges Bill on mandays for the month of\nFurnace coil coating Bill for the month of\nSMF -Labour Charges Bill on mandays for the month of\nCIF -Melting Bill on Piece rate for the month of\nCIF -Labour Charges Bill on mandays for the month of\nCIF - Laddle Lining Bill for the month of\nCIF - Furnace Lining Bill for the month of\nPiece Rate Bill For the Month Of\nSMF - Appreciation Bill for the month of\nSecurity Mandays Bill for the month of\nBoring Piece Rate Bill For the Month Of"
+   "options": "\nSMF -Labour Charges Bill on Mandays for the month of\nSMF -Laddle Lining Bill on Piece rate for the month of\nSMF - Furnace Lining Bill for the month of\nSMF-Melting Bill on piece rate for the month of\nSMF-Attrition Metal Bill on piece rate for the month of\nDifference Bill SMF-Melting Bill on piece rate for the month of\nDifference Bill SMF-Melting Bill on mandays for the month of\nDifference Bill CIF - Labour Charges Bill on mandays for the month of\nFurnace coil coating Bill for the month of\nSMF -Labour Charges Bill on mandays for the month of\nCIF -Melting Bill on Piece rate for the month of\nCIF -Labour Charges Bill on mandays for the month of\nCIF - Laddle Lining Bill for the month of\nCIF - Furnace Lining Bill for the month of\nPiece Rate Bill For the Month Of\nSMF - Appreciation Bill for the month of\nSecurity Mandays Bill for the month of\nBoring Piece Rate Bill For the Month Of\nSolar cleaning Bill for the Month of\nCEO Address Bill for the Month of\nDiwali Attendance Bonus Bill for"
   },
   {
    "fieldname": "billing_details",
@@ -150,7 +150,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2022-08-07 19:04:00.419461",
+ "modified": "2022-12-03 14:20:10.475250",
  "modified_by": "Administrator",
  "module": "HSM working",
  "name": "Biller",
